@@ -1,5 +1,5 @@
 {
-  "manifest_version": 3,
+  "manifest_version": 2,
   "name": "CORS Allow",
   "version": "1.0",
   "description": "Allow CORS for specified URL.",
@@ -9,13 +9,11 @@
     "webRequestBlocking",
     "<all_urls>"
   ],
-  "host_permissions": [
-    "<all_urls>"
-  ],
   "background": {
-    "service_worker": "background.js"
+    "scripts": ["background.js"],
+    "persistent": false
   },
-  "action": {
+  "browser_action": {
     "default_popup": "popup.html",
     "default_title": "CORS Allow"
   }
